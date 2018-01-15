@@ -1,2 +1,3 @@
-Hello my name is Chris
-This is the merge conflict
+This is the new merge conflict
+this is all changed
+My cat's name is Bumper
