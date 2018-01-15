@@ -42,7 +42,6 @@ function decode(message) {
   console.log(result);
   return result;
 }
-
 decode('craft block argon meter bells brown croon droop');
 
 function daysInMonth(month) {
