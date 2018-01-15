@@ -21,18 +21,28 @@ function beyond(num) {
 beyond(0);
 
 function decode(message) {
-  let result = [];
+  let result = "";
   let words = message.split(' ');
   let code = {
-    a: 2,
-    b: 3,
-    c: 4,
-    d: 5
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4
   };
-  for (let i = 0; i < words.length; i++) {
-    console.log(words[i]);
+  const letters = Object.keys(code);
+  for ( let i = 0; i < words.length; i++) {
+    const currentWord = words[i];
+    const firstLetter = currentWord[0];
+    if(letters.includes(firstLetter)) {
+      result += currentWord[code[firstLetter]];
+    } else {
+      result += " ";
+    }
   }
+  console.log(result);
+  return result;
 }
+
 decode('craft block argon meter bells brown croon droop');
 
 function daysInMonth(month) {
