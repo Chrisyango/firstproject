@@ -1,3 +1,5 @@
+'use strict';
+
 function jediName(firstName, lastName) {
     let first = firstName.slice(0, 2);
     let last = lastName.slice(0, 3);
@@ -21,7 +23,7 @@ beyond(0);
 function decode(message) {
     let result = [];
     let words = message.split(" ");
-    for (i = 0; i < words.length; i++) {
+    for (let i = 0; i < words.length; i++) {
         if (words[i][0] === "a") {
             result.push(words[i][1])
         } else if (words[i][0] === "b") {
@@ -36,7 +38,7 @@ function decode(message) {
     }
     console.log(result.join(""));
 }
-decode("craft block argon meter bells brown croon droop");
+decode('craft block argon meter bells brown croon droop');
 
 function daysInMonth(month) {
     switch(month) {
