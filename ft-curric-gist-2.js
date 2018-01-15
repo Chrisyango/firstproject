@@ -58,3 +58,45 @@ function daysInMonth(month) {
     }
 }
 daysInMonth("February");
+
+function rockPaperScissors (choice) {
+    const computerChoice = Math.floor(Math.random() * 3);
+    switch(choice) {
+        case "rock": 
+            if (computerChoice === 3) {
+                (console.log("You win")); 
+             } else if (computerChoice === 2) {
+                (console.log("Sorry, you lost"));
+            } else {
+                (console.log("You tied!"));
+            }
+            break;
+
+            case "scissors": 
+            if (computerChoice === 2) {
+                (console.log("You win")); 
+             } else if (computerChoice === 1) {
+                (console.log("Sorry, you lost"));
+             } else {
+                (console.log("You tied!"));
+            }
+            break;
+
+            case "paper": 
+            if (computerChoice === 1) {
+                (console.log("You win")); 
+             } else if (computerChoice === 3) {
+                (console.log("Sorry, you lost"));
+            } else {
+                (console.log("You tied!"));
+            }
+    }
+}
+
+rockPaperScissors("paper");
+
+/* 
+ 1 beats 3
+ 3 beats 2
+ 2 beats 1
+ */
